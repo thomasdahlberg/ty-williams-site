@@ -1,8 +1,7 @@
 {
-  "arrowParens": "avoid",
   "semi": true,
   "trailingComma": "all",
   "singleQuote": true,
   "printWidth": 70,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
 }

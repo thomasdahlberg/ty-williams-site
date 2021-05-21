@@ -1,20 +1,39 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Container } from '@material-ui/core';
-import useStyles from '../styles/NavBarStyles';
+import { Box, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexWrap: "wrap",
+    alignItems: 'center',
+    backgroundColor: theme.palette.primary.main,
+  },
+  link: {
+    padding: '0.5rem 1rem',
+    color: "white",
+    marginLeft: "0.5rem",
+    textDecoration: "none",
+    '&:hover': {
+      backgroundColor: theme.palette.primary.dark,
+    },
+  }
+}));
 
 const NavBar = (props) => {
   const classes = useStyles();
   return (
-    <Container className={classes.container}>
-      <Link className={classes.link}>About Me</Link>
-      <Link className={classes.link}>Services</Link>
-      <Link className={classes.link}>Client Portal</Link>
-      <Link className={classes.link}>Rates</Link>
-      <Link className={classes.link}>FAQs</Link>
-      <Link className={classes.link}>Contact Me</Link>
-      <Link className={classes.link}>Links & Resources</Link>
-    </Container>
+    <Box className={classes.container}>
+      <Link className={classes.link} to="/about"><Typography variant="button">About Me</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">Services</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">Client Portal</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">Rates</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">FAQs</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">Contact Me</Typography></Link>
+      <Link className={classes.link}><Typography variant="button">Links & Resources</Typography></Link>
+    </Box>
   )
 }
 
