@@ -13,4 +13,5 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-theme-material-ui',
   ],
+  pathPrefix: "/ty-williams-site"
 }
