@@ -27,10 +27,9 @@ const NavBar = (props) => {
   return (
     <Box className={classes.container}>
       <Link className={classes.link} to="/about"><Typography variant="button">About Me</Typography></Link>
-      <Link className={classes.link}><Typography variant="button">Services</Typography></Link>
+      <Link className={classes.link} to="/services"><Typography variant="button">Services</Typography></Link>
+      <Link className={classes.link} to="/faqs"><Typography variant="button">FAQs</Typography></Link>
       <Link className={classes.link}><Typography variant="button">Client Portal</Typography></Link>
-      <Link className={classes.link}><Typography variant="button">Rates</Typography></Link>
-      <Link className={classes.link}><Typography variant="button">FAQs</Typography></Link>
       <Link className={classes.link}><Typography variant="button">Contact Me</Typography></Link>
       <Link className={classes.link}><Typography variant="button">Links & Resources</Typography></Link>
     </Box>

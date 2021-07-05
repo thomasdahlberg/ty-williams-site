@@ -8,10 +8,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "1.45rem",
     "& h2": {
       paddingBottom: "0.5rem",
-      color: theme.palette.primary.dark
+      color: theme.palette.primary.dark,
+      textAlign: "center"
     },
     "& img": {
-      paddingRight: "1.45rem",
+      padding: "1.45rem",
+    },
+    "& p": {
+      marginBottom: "1rem",
     }
   }
 
@@ -20,12 +24,12 @@ const useStyles = makeStyles((theme) => ({
 const Content = (props) => {
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
-      <Typography variant="h4" component="h2">{props.title}</Typography>
+    <Box className={classes.container} display="flex" flexDirection="column" justifyContent="center">
+      <Typography variant={props.headerSize ? props.headerSize : "h4"} component={props.headerComponent ? props.headerComponent : "h2"}>{props.title}</Typography>
       <Divider />
-      <Box display="flex" alignItems="center" padding="1rem">
+      <Box display="flex" alignItems="center" padding="1rem" flexDirection="column" >
         {props.image ? <img src="./avatar.png" alt="avatar"/> : null}
-        <Typography variant="body1" component="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
+        <Box display="flex" alignItems="center" flexDirection="column">{props.children}</Box>
       </Box>
     </Box>
   )

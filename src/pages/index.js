@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout";
-import { CssBaseline, ThemeProvider, Box, Paper, Divider, Typography } from "@material-ui/core";
+import { CssBaseline, ThemeProvider, Box, Typography } from "@material-ui/core";
 import theme from '../gatsby-theme-material-ui-top-layout/theme';
 import Head from "../components/Head";
 import Splash from "../components/Splash";
@@ -32,9 +32,13 @@ const Home = (props) => {
       <Layout>
         <Head title="Welcome" />
         <Splash />
-        <Content title="Welcome!" />
+        <Content title="Welcome!">
+        <Typography variant="h6">
+            Hi There! I’m TyaNisha Williams, the founder of Simply Becoming, LLC and a Licensed Clinical  Professional Counselor located in Baltimore, Maryland. I obtained a Master’s degree in Clinical Mental Health Counseling from Loyola University Maryland. I am particularly passionate about  working with children, young adults and adults. I  have over 11 years of experience working in diverse settings such as outpatient, hospitals and schools. 
+          </Typography>
+        </Content>
         <Box display="flex" justifyContent="flex-start" flexWrap="wrap">
-          <Paper className={classes.paper} elevation={3}>
+          {/* <Paper className={classes.paper} elevation={3}>
             <Typography variant="h5" component="h3">Excepteur Sint</Typography>
             <Divider />
             <Typography variant="body2" component="p">
@@ -47,8 +51,8 @@ const Home = (props) => {
             <Typography variant="body2" component="p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>
-          </Paper>
-        </Box>
+          </Paper> */}
+        </Box> 
       </Layout>
     </ThemeProvider>
   )
