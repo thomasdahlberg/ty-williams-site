@@ -1,18 +1,13 @@
 import { createMuiTheme } from '@material-ui/core';
-import purple from '@material-ui/core/colors/purple';
-import cyan from '@material-ui/core/colors/cyan';
-
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: purple[500],
-      light: "#d05ce3",
-      dark: "#6a0080",
+      main: "rgba(239,35,60,1)",
+      light: "rgba(239,35,60,0.4)",
     },
     secondary: {
-      main: cyan[300],
-      light: "#88ffff",
-      dark: "#009faf",
+      main: "#8D99AE",
+      light: "#EDF2F4",
     },
   },
 });

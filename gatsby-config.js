@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Ty Williams (title)",
+    title: "Simply Becoming Counseling LLC",
     author: "Ty Williams"
   },
   plugins: [

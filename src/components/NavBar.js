@@ -6,19 +6,25 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     flexWrap: "wrap",
     alignItems: 'center',
-    backgroundColor: theme.palette.primary.main,
   },
   link: {
     padding: '0.5rem 1rem',
-    color: "white",
+    color: "black",
     marginLeft: "0.5rem",
     textDecoration: "none",
     '&:hover': {
-      backgroundColor: theme.palette.primary.dark,
+      backgroundColor: theme.palette.secondary.main,
     },
+  },
+  activeLink: {
+    borderBottom: `${theme.palette.primary.main} solid 4px`
+  },
+  text: {
+    fontFamily: 'Quicksand, sans-serif',
+    fontWeight: '700'
   }
 }));
 
@@ -26,12 +32,9 @@ const NavBar = (props) => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      <Link className={classes.link} to="/about"><Typography variant="button">About Me</Typography></Link>
-      <Link className={classes.link} to="/services"><Typography variant="button">Services</Typography></Link>
-      <Link className={classes.link} to="/faqs"><Typography variant="button">FAQs</Typography></Link>
-      <Link className={classes.link}><Typography variant="button">Client Portal</Typography></Link>
-      <Link className={classes.link}><Typography variant="button">Contact Me</Typography></Link>
-      <Link className={classes.link} to="/resources"><Typography variant="button">Links & Resources</Typography></Link>
+      <Link className={classes.link} activeClassName={classes.activeLink} to="/services"><Typography variant="button" className={classes.text}>Services</Typography></Link>
+      <Link className={classes.link} activeClassName={classes.activeLink} to="/contact"><Typography variant="button" className={classes.text}>Contact Me</Typography></Link>
+      <Link className={classes.link} activeClassName={classes.activeLink} to="/client-portal"><Typography variant="button" className={classes.text}>Client Portal</Typography></Link>
     </Box>
   )
 }
