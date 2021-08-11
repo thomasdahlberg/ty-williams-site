@@ -1,5 +1,5 @@
-import { createMuiTheme } from '@material-ui/core';
-const theme = createMuiTheme({
+import { createTheme } from '@material-ui/core';
+const theme = createTheme({
   palette: {
     primary: {
       main: "rgba(239,35,60,1)",

@@ -1,6 +1,5 @@
 import React from "react"
 import { Divider, Typography, Card, CardContent } from "@material-ui/core";
-import theme from '../gatsby-theme-material-ui-top-layout/theme';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -32,8 +31,8 @@ const Plate = (props) => {
         <Divider />
         <Typography component="p">{props.children}</Typography>
       </CardContent>
-    </Card>
-  )
-}
+    </Card>      
+  );
+};
 
 export default Plate;

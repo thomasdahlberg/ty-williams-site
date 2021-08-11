@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout";
-import { CssBaseline, ThemeProvider, Divider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import theme from '../gatsby-theme-material-ui-top-layout/theme';
 import Head from "../components/Head";
 import Plate from "../components/Plate";
@@ -19,8 +19,8 @@ const Home = (props) => {
         </Content>
       </Layout>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default Home;
 

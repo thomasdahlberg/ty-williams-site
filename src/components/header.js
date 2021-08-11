@@ -3,7 +3,6 @@ import NavBar from './NavBar';
 import { Link } from "gatsby"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import theme from '../gatsby-theme-material-ui-top-layout/theme';
 
 const useStyles = makeStyles((theme) => ({
   container: {
