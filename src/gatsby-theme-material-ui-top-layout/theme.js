@@ -2,13 +2,15 @@ import { createTheme } from '@material-ui/core';
 const theme = createTheme({
   palette: {
     primary: {
-      main: "rgba(239,35,60,1)",
-      light: "rgba(239,35,60,0.4)",
+      main: "#e38700",
+      light: "#FFF8E5",
     },
     secondary: {
-      main: "#8D99AE",
-      light: "#EDF2F4",
+      main: "#FFB344",
+      light: "#CCF6C8",
     },
+    black: "#2B2B2B",
+    white: "#F0F0F0"
   },
 });
 

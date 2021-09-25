@@ -26,10 +26,12 @@ const Services = () => {
         <Head title="Services" />
         <Content title="Services">
           <Plate title="Individual Sessions">
-            I believe that clients are the experts in their lives. I utilize a collaborative, supportive approach to the counseling relationship.  Individual sessions are 45-50 minutes.
+            <Typography component="p">
+              I believe that clients are the experts in their lives. I utilize a collaborative, supportive approach to the counseling relationship.  Individual sessions are 45-50 minutes.
+            </Typography>
           </Plate>
           <Plate title="Rates">
-            <Typography>
+            <Typography component="p">
               Simply Becoming is currently  a telehealth, private pay practice. I am not on any insurance panels at this time and therefore do not accept insurance. Intake sessions are 60 minutes. Following intakes, sessions are typically 45-50 minutes in length unless otherwise noted by the clinician. 
             </Typography>
             <List className={classes.list}>

@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     padding: '0.5rem 1rem',
-    color: "black",
     marginLeft: "0.5rem",
+    color: theme.palette.black,
     textDecoration: "none",
     '&:hover': {
       backgroundColor: theme.palette.secondary.main,
@@ -32,6 +32,7 @@ const NavBar = (props) => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
+      <Link className={classes.link} activeClassName={classes.activeLink} to="/"><Typography variant="button" className={classes.text}>Home</Typography></Link>
       <Link className={classes.link} activeClassName={classes.activeLink} to="/services"><Typography variant="button" className={classes.text}>Services</Typography></Link>
       <Link className={classes.link} activeClassName={classes.activeLink} to="/contact"><Typography variant="button" className={classes.text}>Contact Me</Typography></Link>
       <Link className={classes.link} activeClassName={classes.activeLink} to="/client-portal"><Typography variant="button" className={classes.text}>Client Portal</Typography></Link>

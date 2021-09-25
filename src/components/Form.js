@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 const Form = () => {
   const classes = useStyles();
   return (
-    <form>
+    <form className={classes.container}>
       <Box
         display="flex" 
         justifyContent="center"

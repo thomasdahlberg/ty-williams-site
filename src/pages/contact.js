@@ -14,7 +14,7 @@ const Contact = () => {
       <Layout>
         <Head title="Contact Me" />
         <Content title="Contact Me">
-          <Plate title="Contact Form" width="85%">
+          <Plate title="Contact Form" type="form">
             <Form />
           </Plate>
         </Content>
