@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 const AccordionPlate = (props) => {
   const classes = useStyles();
   return (
-    <Accordion className={classes.wrapper} expanded={props.startExpanded}>
+    <Accordion className={classes.wrapper}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
       >

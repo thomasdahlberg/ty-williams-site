@@ -1,12 +1,11 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
-import { CssBaseline, ThemeProvider, Typography, List, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
+import { CssBaseline, ThemeProvider, Typography, List, ListItem, ListItemText, ListItemIcon, Divider } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import AccordionPlate from "../components/AccordionPlate";
 import Grid from '@mui/material/Grid';
 
 import Layout from "../components/Layout";
@@ -19,19 +18,36 @@ import { Box } from "@mui/system";
 const useStyles = makeStyles(() => ({
   about: {
     display: "flex",
-    flexWrap: "wrap",
+    flexWrap: "wrap-reverse",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
+    "& img": {
+      maxWidth: "250px"
+    }
   },
-  philosophy: {
-    width: "100%",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between"
+  bio: {
+    maxWidth: "600px"
+  },
+  summary: {
+    // color: theme.palette.black,
+    paddingBottom: "0.5rem",
+    textAlign: "left",
+    fontFamily: 'Quicksand, sans-serif',
+    fontWeight: '600'
+  },
+  details: {
+    marginTop: "1rem",
+    marginBottom: "1rem",
   }
 }));
 
 const Home = () => {
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
@@ -40,68 +56,74 @@ const Home = () => {
         <Head title="Welcome" />
         <Content title="Welcome!">
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={12} sm={8}>
               <Plate title="A Little About Me">
                 <div className={classes.about}>
-                  <Typography component="p"> 
+                  <Typography component="p" className={classes.bio}> 
                     Hi There! I’m TyaNisha Williams, the founder of Simply Becoming, LLC and a Licensed Clinical Professional Counselor located in Baltimore, Maryland. I am a native of upstate New York. I received my Bachelors of Arts degree in Health Education from State University New York at Cortland. After many years of teaching, I moved to Baltimore to pursue my dream of attending graduate school. I obtained a Master’s degree in Clinical Mental Health Counseling from Loyola University Maryland.  I am particularly passionate about working with young adults and adults. I have over 11 years of experience working in diverse therapeutic settings such as outpatient, hospitals and schools.  I have specialized training and experience in anxiety, depression, trauma, life transitions, self-esteem, spirituality, and relationship issues. In my spare time, I enjoy listening to music, dancing, biking, coloring and building Lego models.
                   </Typography>
                   <img className={classes.headshot} src='./sample_headshot.png' alt='headshot' />
                 </div>
               </Plate>
             </Grid>
-            <Grid item xs={4}>
-              <AccordionPlate component="h3" variant="h5" title="What I Do" startExpanded={true}>
-                <Box display="flex" flexDirection="column">
-                  <Typography component="p">
-                    I provide individual therapy to support partners who are:
-                  </Typography>
-                  <List>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Struggling with excessive and/or unrealistic worry that is difficult to control.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Overextending themselves and having a challenging time prioritizing self-care.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Constantly feeling burned out and depleted by the demands and expectations they put on themselves as well as others.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Having a difficult time articulating their feelings, needs, and wants.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Living unbalanced lives due to difficulty setting boundaries.</ListItemText>
-                    </ListItem>
-                  </List>
-                </Box>
-              </AccordionPlate>
-            </Grid>
-          </Grid>
-          {/* 
-          <div className={classes.philosophy}>
-            <div title="Why I Do It">
-            <Accordion>
+            <Grid item xs={12} sm={4}>
+              <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
+                  className={classes.summary}
                 >
-                  <Typography component="h3">Why I Do It</Typography>
+                  <Typography component="h3" variant="h5">What I Do</Typography>
+                  <Divider />
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails className={classes.details}>
+                  <Box display="flex" flexDirection="column">
+                    <Typography component="p">
+                      I provide individual therapy to support partners who are:
+                    </Typography>
+                    <List>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Struggling with excessive and/or unrealistic worry that is difficult to control.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Overextending themselves and having a challenging time prioritizing self-care.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Constantly feeling burned out and depleted by the demands and expectations they put on themselves as well as others.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Having a difficult time articulating their feelings, needs, and wants.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Living unbalanced lives due to difficulty setting boundaries.</ListItemText>
+                      </ListItem>
+                    </List>
+                  </Box>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  className={classes.summary}
+                >
+                  <Typography component="h3" variant="h5">Why I Do It</Typography>
+                  <Divider />
+                </AccordionSummary>
+                <AccordionDetails className={classes.details}>
                   <List>
                     <ListItem>
                       <ListItemIcon>
@@ -118,54 +140,56 @@ const Home = () => {
                   </List>
                 </AccordionDetails>
               </Accordion>
-            </div>
-            <div title="What I Believe">
-              <Accordion>
+              <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
+                  className={classes.summary}
                 >
-                  <Typography component="h3">What I Believe</Typography>
+                  <Typography component="h3" variant="h5">What I Believe</Typography>
+                  <Divider />
                 </AccordionSummary>
-                <AccordionDetails>
-                  <Typography component="p">
-                    It is my belief that therapy is about equipping individuals to develop practical tools to navigate through life's challenges while taking the necessary steps to become the best versions of themselves. I believe that you can: 
-                  </Typography>
-                  <List>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Be empowered to live a balanced and healthy life.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Develop emotional resilience to adapt to life's ups and downs.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Set clear boundaries and effectively maintain and refine them.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Develop healthy coping mechanisms and thoughts patterns.</ListItemText>
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon>
-                        <ChevronRightIcon />
-                      </ListItemIcon>
-                      <ListItemText>Effectively communicate your needs and wants.</ListItemText>
-                    </ListItem>
-                  </List>
+                <AccordionDetails className={classes.details}>
+                  <Box display="flex" flexDirection="column">
+                    <Typography component="p">
+                      It is my belief that therapy is about equipping individuals to develop practical tools to navigate through life's challenges while taking the necessary steps to become the best versions of themselves. I believe that you can: 
+                    </Typography>
+                    <List>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Be empowered to live a balanced and healthy life.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Develop emotional resilience to adapt to life's ups and downs.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Set clear boundaries and effectively maintain and refine them.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Develop healthy coping mechanisms and thoughts patterns.</ListItemText>
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Effectively communicate your needs and wants.</ListItemText>
+                      </ListItem>
+                    </List>
+                  </Box>
                 </AccordionDetails>
               </Accordion>
-            </div>
-          </div> */}
+            </Grid>
+          </Grid>
         </Content>
       </Layout>
     </ThemeProvider>
