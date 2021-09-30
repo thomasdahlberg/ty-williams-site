@@ -5,8 +5,13 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   paper: {
     color: theme.palette.black,
-    // backgroundColor: theme.palette.white,
-  }
+    backgroundImage: url("./splash.jpg"),  
+    minHeight: "500px",  
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
+  },
 }));
 
 const Layout = (props) => {

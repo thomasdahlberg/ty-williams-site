@@ -15,7 +15,7 @@ import Plate from "../components/Plate";
 import Content from "../components/Content";
 import { Box } from "@mui/system";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   about: {
     display: "flex",
     flexWrap: "wrap-reverse",
@@ -38,6 +38,13 @@ const useStyles = makeStyles(() => ({
   details: {
     marginTop: "1rem",
     marginBottom: "1rem",
+  },
+  accordion: {
+    color: theme.palette.black,
+    paddingBottom: "0.5rem",
+    textAlign: "left",
+    fontFamily: 'Quicksand, sans-serif',
+    fontWeight: '600'
   }
 }));
 
@@ -62,17 +69,17 @@ const Home = () => {
                   <Typography component="p" className={classes.bio}> 
                     Hi There! I’m TyaNisha Williams, the founder of Simply Becoming, LLC and a Licensed Clinical Professional Counselor located in Baltimore, Maryland. I am a native of upstate New York. I received my Bachelors of Arts degree in Health Education from State University New York at Cortland. After many years of teaching, I moved to Baltimore to pursue my dream of attending graduate school. I obtained a Master’s degree in Clinical Mental Health Counseling from Loyola University Maryland.  I am particularly passionate about working with young adults and adults. I have over 11 years of experience working in diverse therapeutic settings such as outpatient, hospitals and schools.  I have specialized training and experience in anxiety, depression, trauma, life transitions, self-esteem, spirituality, and relationship issues. In my spare time, I enjoy listening to music, dancing, biking, coloring and building Lego models.
                   </Typography>
-                  <img className={classes.headshot} src='./sample_headshot.png' alt='headshot' />
+                  <img className={classes.headshot} src='./headshot.png' alt='counselor headshot' />
                 </div>
               </Plate>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
                 >
-                  <Typography component="h3" variant="h5">What I Do</Typography>
+                  <Typography component="h3" variant="h5" className={classes.accordion}>What I Do</Typography>
                   <Divider />
                 </AccordionSummary>
                 <AccordionDetails className={classes.details}>
@@ -117,10 +124,10 @@ const Home = () => {
               </Accordion>
               <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
                 >
-                  <Typography component="h3" variant="h5">Why I Do It</Typography>
+                  <Typography component="h3" variant="h5" className={classes.accordion}>Why I Do It</Typography>
                   <Divider />
                 </AccordionSummary>
                 <AccordionDetails className={classes.details}>
@@ -142,10 +149,10 @@ const Home = () => {
               </Accordion>
               <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
                 >
-                  <Typography component="h3" variant="h5">What I Believe</Typography>
+                  <Typography component="h3" variant="h5" className={classes.accordion}>What I Believe</Typography>
                   <Divider />
                 </AccordionSummary>
                 <AccordionDetails className={classes.details}>

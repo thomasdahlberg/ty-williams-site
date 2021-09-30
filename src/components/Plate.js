@@ -7,10 +7,6 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     margin: "0.5rem",
   },
-  oneThird: {
-    maxWidth: "475px",
-    margin: "0.5rem",
-  },
   container: {
     margin: "0.5rem",
     "& h3": {
@@ -25,15 +21,19 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "1rem",
     }
   },
+  divider: {
+    backgroundColor: theme.palette.primary.light,
+    height: "3px"
+  }
 }));
 
 const Plate = (props) => {
   const classes = useStyles();
   return (
-    <Card className={props.width === "30" ? classes.oneThird : classes.wrapper}>
+    <Card className={classes.wrapper}>
       <CardContent className={classes.container}>
         <Typography variant="h5" component="h3">{props.title}</Typography>
-        <Divider />
+        <Divider className={classes.divider}/>
         {props.children}
       </CardContent>
     </Card>      

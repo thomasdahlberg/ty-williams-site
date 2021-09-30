@@ -5,7 +5,7 @@ import favicon from '../../static/favicon.ico';
 const Head = ({title}) => {
   return (
     <div>
-      <Helmet title={`${title} |`}>
+      <Helmet title={`${title}`}>
         <link rel="icon" href={favicon}/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
