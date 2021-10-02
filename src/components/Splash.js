@@ -4,11 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   splash: {
-    height: "50%",
-    padding: "1.45rem",
-    backgroundImage: "url('./splash.jpg')",
-    backgroundSize: "cover",
-    backgroundPostion: "center",
+    height: "400px",
   },
   blurb: {
     display: "flex",
@@ -16,10 +12,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: "1rem",
-    "& button": {
-      marginTop: "2rem",
-    }
+  },
+  text: {
+    fontFamily: 'Quicksand, sans-serif',
+    fontWeight: '600',
+    color: theme.palette.black,
+    textAlign: "center"
   }
+
 }));
 
 
@@ -35,10 +35,7 @@ const Splash = (props) => {
       color="white"
     >
       <Container className={classes.blurb}>
-        {/* <Paper elevation={3} className={classes.blurb}> */}
-          <Typography variant="h4" component="h2">Lorem ipsum dolor sit amet.</Typography>
-          <Button variant="contained" color="primary">Get Started</Button>
-        {/* </Paper> */}
+          <Typography variant="h2" component="h2" className={classes.text}>Take time to work on you.</Typography>
       </Container>
     </Box>
   )

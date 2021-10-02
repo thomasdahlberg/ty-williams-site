@@ -8,14 +8,15 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    paddingBottom: "1rem",
   },
   link: {
     textDecoration: "none",
     padding: "2rem"
   },
   logo: {
-    maxWidth: "350px",
+    maxWidth: "300px",
   }
 }));
 

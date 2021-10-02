@@ -14,6 +14,7 @@ import Head from "../components/Head";
 import Plate from "../components/Plate";
 import Content from "../components/Content";
 import { Box } from "@mui/system";
+import Splash from "../components/Splash";
 
 const useStyles = makeStyles((theme) => ({
   about: {
@@ -45,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontFamily: 'Quicksand, sans-serif',
     fontWeight: '600'
+  },
+  container: {
+    backgroundColor: "#fafafa",
+    // width: "100vw",
   }
 }));
 
@@ -61,10 +66,11 @@ const Home = () => {
       <CssBaseline />
       <Layout>
         <Head title="Welcome" />
-        <Content title="Welcome!">
-          <Grid container spacing={2}>
+        <Content>
+          <Splash />
+          <Grid container spacing={2} className={classes.container}>
             <Grid item xs={12} sm={8}>
-              <Plate title="A Little About Me">
+              <Plate title="A Little About Me" variant="h4">
                 <div className={classes.about}>
                   <Typography component="p" className={classes.bio}> 
                     Hi There! I’m TyaNisha Williams, the founder of Simply Becoming, LLC and a Licensed Clinical Professional Counselor located in Baltimore, Maryland. I am a native of upstate New York. I received my Bachelors of Arts degree in Health Education from State University New York at Cortland. After many years of teaching, I moved to Baltimore to pursue my dream of attending graduate school. I obtained a Master’s degree in Clinical Mental Health Counseling from Loyola University Maryland.  I am particularly passionate about working with young adults and adults. I have over 11 years of experience working in diverse therapeutic settings such as outpatient, hospitals and schools.  I have specialized training and experience in anxiety, depression, trauma, life transitions, self-esteem, spirituality, and relationship issues. In my spare time, I enjoy listening to music, dancing, biking, coloring and building Lego models.

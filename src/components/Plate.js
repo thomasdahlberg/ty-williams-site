@@ -28,11 +28,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Plate = (props) => {
+  const { variant, component } = props;
   const classes = useStyles();
   return (
     <Card className={classes.wrapper}>
       <CardContent className={classes.container}>
-        <Typography variant="h5" component="h3">{props.title}</Typography>
+        <Typography variant={variant ? variant : "h5"} component={component ? component: "h3"}>{props.title}</Typography>
         <Divider className={classes.divider}/>
         {props.children}
       </CardContent>
