@@ -4,6 +4,9 @@ import { TextField, TextareaAutosize, Box, Button } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    width: "100%"
+  },
   actionZone: {
     display: "flex",
     justifyContent: "flex-end",
@@ -34,8 +37,7 @@ const Form = () => {
         <TextareaAutosize aria-label="Message Content" minRows={5} placeholder="Type your message here" />
       </Box>
       <Box className={classes.actionZone}>
-        <Button className={classes.button} variant="contained" color="primary">Submit</Button>
-        <Button className={classes.button} variant="contained" color="secondary">Cancel</Button>
+        <Button className={classes.button} variant="contained" color="secondary">Submit</Button>
       </Box>
     </form>
   );

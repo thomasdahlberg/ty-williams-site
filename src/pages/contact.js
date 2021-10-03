@@ -6,15 +6,29 @@ import Head from "../components/Head";
 import Content from "../components/Content";
 import Form from "../components/Form";
 import Plate from "../components/Plate";
+import Grid from '@mui/material/Grid';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "solid red 5px",
+    width: "100%"
+  }
+}));
 
 const Contact = () => {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Layout>
         <Head title="Contact Me" />
-        <Content title="Contact Me">
-          <Plate title="Contact Form" type="form">
+        <Content>
+          <Plate title="Contact Form" form={true} className={classes.container}>
             <Form />
           </Plate>
         </Content>

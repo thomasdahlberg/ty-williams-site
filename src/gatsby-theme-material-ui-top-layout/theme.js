@@ -10,7 +10,7 @@ const theme = createTheme({
       light: "#CCF6C8",
     },
     black: "#2B2B2B",
-    white: "#F0F0F0"
+    white: "#FAFAFA"
   },
 });
 

@@ -31,7 +31,7 @@ const Content = (props) => {
         <Typography variant={props.headerSize ? props.headerSize : "h4"} component={props.headerComponent ? props.headerComponent : "h2"} className={classes.title}>{props.title}</Typography>
         <Divider className={classes.divider}/>
         <Box display="flex" alignItems="center" flexDirection="column">
-          <Box sx={{ flexGrow: 1 }}>{props.children}</Box>
+          <Box className={classes.innerContent} sx={{ flexGrow: 1 }}>{props.children}</Box>
         </Box>
       </Box>
     )

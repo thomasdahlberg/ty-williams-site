@@ -18,6 +18,7 @@ import Splash from "../components/Splash";
 
 const useStyles = makeStyles((theme) => ({
   about: {
+    paddingTop: "0.5rem",
     display: "flex",
     flexWrap: "wrap-reverse",
     alignItems: "center",
@@ -39,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
   details: {
     marginTop: "1rem",
     marginBottom: "1rem",
+    "& p": {
+      fontWeight: "700"
+    }
   },
   accordion: {
     color: theme.palette.black,
@@ -48,8 +52,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '600'
   },
   container: {
-    backgroundColor: "#fafafa",
-    // width: "100vw",
+    backgroundColor: "#CCF6C8",
+    padding: "1rem",
+    paddingBottom: "3rem"
+  },
+  philosophy: {
+    marginBottom: "0.5rem"
   }
 }));
 
@@ -80,7 +88,7 @@ const Home = () => {
               </Plate>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+              <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className={classes.philosophy}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
@@ -128,7 +136,7 @@ const Home = () => {
                   </Box>
                 </AccordionDetails>
               </Accordion>
-              <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+              <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className={classes.philosophy}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
@@ -153,7 +161,7 @@ const Home = () => {
                   </List>
                 </AccordionDetails>
               </Accordion>
-              <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+              <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className={classes.philosophy}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}

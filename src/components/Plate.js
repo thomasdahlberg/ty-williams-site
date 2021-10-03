@@ -4,8 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    margin: "0.5rem",
+  formWrapper: {
+    margin: "1rem",
+    width: "83vw"
   },
   container: {
     margin: "0.5rem",
@@ -31,7 +32,7 @@ const Plate = (props) => {
   const { variant, component } = props;
   const classes = useStyles();
   return (
-    <Card className={classes.wrapper}>
+    <Card className={props.form ? classes.formWrapper : null}>
       <CardContent className={classes.container}>
         <Typography variant={variant ? variant : "h5"} component={component ? component: "h3"}>{props.title}</Typography>
         <Divider className={classes.divider}/>

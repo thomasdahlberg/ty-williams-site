@@ -8,29 +8,32 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.black,
   },
   content: {
+    minHeight: "75vh",  
     backgroundImage: `url("./splash_crop.jpg")`,  
-    minHeight: "100%",  
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    paddingBottom: "50px"
+    paddingBottom: "100px"
   },
   veil:{
-    backgroundColor: "rgba(135, 214, 126, 0.3)",
+    backgroundColor: "rgba(135, 214, 126, 0.2)",
+    minHeight: "75vh",  
   },
   footer: {
     display: "flex",
     justifyContent: "center",
+    flexWrap: "wrap",
     alignItems: "center",
-    marginTop: "-50px",
-    height: "50px",
+    marginTop: "-100px",
+    height: "100px",
     zIndex: "1",
-    backgroundColor: "rgba(213, 240, 213, 1)",
+    backgroundColor: "rgba(135, 214, 126, 0.6)",
     "& p": {
       fontFamily: 'Quicksand, sans-serif',
       fontWeight: '600',
-      margin: "0.5rem"
+      marginRight: "1rem",
+      marginBottom: "0.25rem"
     },
     "& a": {
       color: theme.palette.black,
@@ -57,9 +60,7 @@ const Layout = (props) => {
       </div>
       <footer className={classes.footer}>
         <Typography variant="h6" component="p">Ty Williams &copy; {date.getFullYear()}</Typography>
-        <Typography variant="h6" component="p">|</Typography>
         <Typography variant="h6" component="p"><Link href="mailto: ty@simplybecounseling.org">ty@simplybecounseling.org</Link></Typography>
-        
       </footer>
     </div>
   )
