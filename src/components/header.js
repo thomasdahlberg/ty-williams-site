@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: "1rem",
+    paddingTop: "2rem",
     backgroundColor: "#CCF6C8",
   },
   link: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     // padding: "2rem"
   },
   logo: {
-    maxWidth: "350px",
+    width: "350px",
   }
 }));
 
@@ -26,7 +27,7 @@ const Header = (props) => {
   return (
     <Box className={classes.container}>
       <Link to="/" className={classes.link}>
-        <img className={classes.logo} src="./logo_crop.svg" alt="logo" aria-label="Simply Becoming Counseling LLC logo" />
+        <img className={classes.logo} src="./sb_logo.svg" alt="logo" aria-label="Simply Becoming Counseling LLC logo" />
       </Link>
       <NavBar />
     </Box>
