@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     minHeight: "75vh",  
-    backgroundImage: `url("./splash_crop.jpg")`,  
+    backgroundImage: `url("./splash_crop2.jpg")`,  
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
