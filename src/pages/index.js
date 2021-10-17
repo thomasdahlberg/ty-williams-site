@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "600px"
   },
   summary: {
-    // color: theme.palette.black,
     paddingBottom: "0.5rem",
     textAlign: "left",
     fontFamily: 'Quicksand, sans-serif',
@@ -75,14 +74,30 @@ const Home = () => {
       <Layout>
         <Head title="Welcome" />
         <Content>
-          <Splash />
+          <Splash text={"Become the best version of yourself."}/>
           <Grid container spacing={2} className={classes.container}>
             <Grid item xs={12} sm={8}>
               <Plate title="A Little About Me" variant="h4">
                 <div className={classes.about}>
-                  <Typography component="p" className={classes.bio}> 
-                    Hi There! I’m TyaNisha Williams, the founder of Simply Becoming, LLC and a Licensed Clinical Professional Counselor located in Baltimore, Maryland. I am a native of upstate New York. I received my Bachelors of Arts degree in Health Education from State University New York at Cortland. After many years of teaching, I moved to Baltimore to pursue my dream of attending graduate school. I obtained a Master’s degree in Clinical Mental Health Counseling from Loyola University Maryland.  I am particularly passionate about working with young adults and adults. I have over 11 years of experience working in diverse therapeutic settings such as outpatient, hospitals and schools.  I have specialized training and experience in anxiety, depression, trauma, life transitions, self-esteem, spirituality, and relationship issues. In my spare time, I enjoy listening to music, dancing, biking, coloring and building Lego models.
-                  </Typography>
+                  <div>
+                    <Typography component="p" className={classes.bio}>Hi There! I’m TyaNisha Williams, the founder of Simply Becoming Counseling, LLC
+                      and a Licensed Clinical Professional Counselor located in Baltimore, Maryland. I
+                      am a native of upstate New York. I received my Bachelors of Arts degree in Health
+                      Education from State University New York at Cortland. After many years of
+                      teaching, I moved to Baltimore where I obtained a Master’s degree in Clinical
+                      Mental Health Counseling from Loyola University Maryland.
+                    </Typography>
+                    <Typography component="p" className={classes.bio}>I am particularly passionate about working with adults. I have over 11 years of
+                      experience working in diverse therapeutic settings such as outpatient, hospitals
+                      and schools. I have specialized training and experience in anxiety, depression,
+                      trauma, life transitions, self-esteem, spirituality, and relationship issues. My
+                      holistic, person-centered approach provides a safe and supportive
+                      environment while promoting hope, growth, healing and wellness.
+                    </Typography>
+                    <Typography component="p" className={classes.bio}>In my spare time, I enjoy listening to music, dancing, biking, coloring and
+                       building Lego models.
+                    </Typography>
+                  </div>
                   <img className={classes.headshot} src='./headshot.png' alt='counselor headshot' />
                 </div>
               </Plate>
@@ -99,40 +114,40 @@ const Home = () => {
                 <AccordionDetails className={classes.details}>
                   <Box display="flex" flexDirection="column">
                     <Typography component="p">
-                      I provide individual therapy to support partners who are:
+                      I provide individual therapy to support partners who are constantly feeling burned out and depleted by demands and expectations.
                     </Typography>
-                    <List>
-                      <ListItem>
+                    {/* <List> */}
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Struggling with excessive and/or unrealistic worry that is difficult to control.</ListItemText>
                       </ListItem>
-                      <ListItem>
-                        <ListItemIcon>
+                      <ListItem> */}
+                        {/* <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Overextending themselves and having a challenging time prioritizing self-care.</ListItemText>
-                      </ListItem>
-                      <ListItem>
+                      </ListItem> */}
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Constantly feeling burned out and depleted by the demands and expectations they put on themselves as well as others.</ListItemText>
-                      </ListItem>
-                      <ListItem>
+                        <ListItemText></ListItemText>
+                      </ListItem> */}
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Having a difficult time articulating their feelings, needs, and wants.</ListItemText>
                       </ListItem>
-                      <ListItem>
-                        <ListItemIcon>
+                      <ListItem> */}
+                        {/* <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Living unbalanced lives due to difficulty setting boundaries.</ListItemText>
-                      </ListItem>
-                    </List>
+                      </ListItem> */}
+                    {/* </List> */}
                   </Box>
                 </AccordionDetails>
               </Accordion>
@@ -141,24 +156,27 @@ const Home = () => {
                   expandIcon={<ExpandMoreIcon color="primary"/>}
                   className={classes.summary}
                 >
-                  <Typography component="h3" variant="h5" className={classes.accordion}>Why I Do It</Typography>
+                  <Typography component="h3" variant="h5" className={classes.accordion}>Why I Do What I Do</Typography>
                   <Divider />
                 </AccordionSummary>
                 <AccordionDetails className={classes.details}>
-                  <List>
-                    <ListItem>
+                  <Typography component="p">
+                    It’s rewarding for me to be able to guide individuals towards awareness, healing, growth and wellness.
+                  </Typography>
+                  {/* <List> */}
+                    {/* <ListItem>
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
                       <ListItemText>I am passionate about equipping individuals with the tools needed to lie balanced lives.</ListItemText>
-                    </ListItem>
-                    <ListItem>
+                    </ListItem> */}
+                    {/* <ListItem>
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
-                      <ListItemText>It’s rewarding for me to be able to guide individuals towards awareness, growth, healing, and wellness.</ListItemText>
-                    </ListItem>
-                  </List>
+                      <ListItemText></ListItemText>
+                    </ListItem> */}
+                  {/* </List> */}
                 </AccordionDetails>
               </Accordion>
               <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className={classes.philosophy}>
@@ -175,36 +193,36 @@ const Home = () => {
                       It is my belief that therapy is about equipping individuals to develop practical tools to navigate through life's challenges while taking the necessary steps to become the best versions of themselves. I believe that you can: 
                     </Typography>
                     <List>
-                      <ListItem>
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Be empowered to live a balanced and healthy life.</ListItemText>
+                      </ListItem> */}
+                      <ListItem>
+                        <ListItemIcon>
+                          <ChevronRightIcon />
+                        </ListItemIcon>
+                        <ListItemText>Develop emotional resilience to adapt to life’s transitions.</ListItemText>
                       </ListItem>
                       <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Develop emotional resilience to adapt to life's ups and downs.</ListItemText>
+                        <ListItemText>Learn to set clear boundaries and effectively maintain and refine them.</ListItemText>
                       </ListItem>
-                      <ListItem>
-                        <ListItemIcon>
-                          <ChevronRightIcon />
-                        </ListItemIcon>
-                        <ListItemText>Set clear boundaries and effectively maintain and refine them.</ListItemText>
-                      </ListItem>
-                      <ListItem>
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Develop healthy coping mechanisms and thoughts patterns.</ListItemText>
-                      </ListItem>
-                      <ListItem>
+                      </ListItem> */}
+                      {/* <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Effectively communicate your needs and wants.</ListItemText>
-                      </ListItem>
+                      </ListItem> */}
                     </List>
                   </Box>
                 </AccordionDetails>

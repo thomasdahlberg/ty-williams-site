@@ -61,6 +61,7 @@ const Layout = (props) => {
       <footer className={classes.footer}>
         <Typography variant="h6" component="p">Ty Williams &copy; {date.getFullYear()}</Typography>
         <Typography variant="h6" component="p"><Link href="mailto: ty@simplybecounseling.org">ty@simplybecounseling.org</Link></Typography>
+        <Typography variant="h6" component="p">(443) 857-0893</Typography>
       </footer>
     </div>
   )

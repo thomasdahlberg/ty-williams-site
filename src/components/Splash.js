@@ -35,7 +35,7 @@ const Splash = (props) => {
       color="white"
     >
       <Container className={classes.blurb}>
-          <Typography variant="h2" component="h2" className={classes.text}>Take time to work on you.</Typography>
+          <Typography variant="h2" component="h2" className={classes.text}>{props.text}</Typography>
       </Container>
     </Box>
   )

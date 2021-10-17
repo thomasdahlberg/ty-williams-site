@@ -28,7 +28,7 @@ const Contact = () => {
       <Layout>
         <Head title="Contact Me" />
         <Content>
-          <Plate title="Contact Form" form={true} className={classes.container}>
+          <Plate title="Contact Me" form={true} variant="h4" className={classes.container}>
             <Form />
           </Plate>
         </Content>
