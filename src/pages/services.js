@@ -63,7 +63,7 @@ const Services = () => {
       <Layout>
         <Head title="Services" />
         <Content title="">
-          <Splash text={"Navigate through various life experiences."}/>
+          <Splash text={"Become the best version of yourself."}/>
           <Grid container spacing={2} className={classes.container}>
             <Grid item xs={12} sm={8}>
               <Plate title="Services" variant="h4">

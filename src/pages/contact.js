@@ -6,7 +6,6 @@ import Head from "../components/Head";
 import Content from "../components/Content";
 import Form from "../components/Form";
 import Plate from "../components/Plate";
-import Grid from '@mui/material/Grid';
 
 import { makeStyles } from '@material-ui/core/styles';
 

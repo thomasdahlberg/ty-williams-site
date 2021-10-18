@@ -114,40 +114,40 @@ const Home = () => {
                 <AccordionDetails className={classes.details}>
                   <Box display="flex" flexDirection="column">
                     <Typography component="p">
-                      I provide individual therapy to support partners who are constantly feeling burned out and depleted by demands and expectations.
+                      I provide individual therapy to support partners who are:
                     </Typography>
-                    {/* <List> */}
-                      {/* <ListItem>
+                    <List>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Struggling with excessive and/or unrealistic worry that is difficult to control.</ListItemText>
+                        <ListItemText>Struggling with anxiety and/or depressive symptoms that are difficult to control.</ListItemText>
                       </ListItem>
-                      <ListItem> */}
-                        {/* <ListItemIcon>
+                      <ListItem>
+                        <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Overextending themselves and having a challenging time prioritizing self-care.</ListItemText>
-                      </ListItem> */}
-                      {/* <ListItem>
+                      </ListItem>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText></ListItemText>
-                      </ListItem> */}
-                      {/* <ListItem>
+                        <ListItemText>Constantly feeling burned out and depleted by the demands and expectations.</ListItemText>
+                      </ListItem>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Having a difficult time articulating their feelings, needs, and wants.</ListItemText>
                       </ListItem>
-                      <ListItem> */}
-                        {/* <ListItemIcon>
+                      <ListItem>
+                        <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Living unbalanced lives due to difficulty setting boundaries.</ListItemText>
-                      </ListItem> */}
-                    {/* </List> */}
+                      </ListItem>
+                    </List>
                   </Box>
                 </AccordionDetails>
               </Accordion>
@@ -160,23 +160,21 @@ const Home = () => {
                   <Divider />
                 </AccordionSummary>
                 <AccordionDetails className={classes.details}>
-                  <Typography component="p">
-                    It’s rewarding for me to be able to guide individuals towards awareness, healing, growth and wellness.
-                  </Typography>
-                  {/* <List> */}
-                    {/* <ListItem>
+                  {/* <Typography component="p"></Typography> */}
+                  <List>
+                    <ListItem>
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
-                      <ListItemText>I am passionate about equipping individuals with the tools needed to lie balanced lives.</ListItemText>
-                    </ListItem> */}
-                    {/* <ListItem>
+                      <ListItemText>It’s rewarding for me to be able to guide individuals towards awareness, growth, healing, and wellness.</ListItemText>
+                    </ListItem>
+                    <ListItem>
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
-                      <ListItemText></ListItemText>
-                    </ListItem> */}
-                  {/* </List> */}
+                      <ListItemText>As a wife, a mom, and a career woman, I know the challenge in trying to find balance.</ListItemText>
+                    </ListItem>
+                  </List>
                 </AccordionDetails>
               </Accordion>
               <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className={classes.philosophy}>
@@ -193,12 +191,12 @@ const Home = () => {
                       It is my belief that therapy is about equipping individuals to develop practical tools to navigate through life's challenges while taking the necessary steps to become the best versions of themselves. I believe that you can: 
                     </Typography>
                     <List>
-                      {/* <ListItem>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Be empowered to live a balanced and healthy life.</ListItemText>
-                      </ListItem> */}
+                      </ListItem>
                       <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
@@ -211,18 +209,18 @@ const Home = () => {
                         </ListItemIcon>
                         <ListItemText>Learn to set clear boundaries and effectively maintain and refine them.</ListItemText>
                       </ListItem>
-                      {/* <ListItem>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Develop healthy coping mechanisms and thoughts patterns.</ListItemText>
-                      </ListItem> */}
-                      {/* <ListItem>
+                        <ListItemText>Develop healthy coping mechanisms and thought patterns.</ListItemText>
+                      </ListItem>
+                      <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
                         <ListItemText>Effectively communicate your needs and wants.</ListItemText>
-                      </ListItem> */}
+                      </ListItem>
                     </List>
                   </Box>
                 </AccordionDetails>
