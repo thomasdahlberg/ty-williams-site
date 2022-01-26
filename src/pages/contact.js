@@ -27,8 +27,8 @@ const Contact = () => {
       <Layout>
         <Head title="Contact Me" />
         <Content>
-          <Plate title="Contact Me" form={true} variant="h4" className={classes.container}>
-            <Form />
+          <Plate form variant="h4" className={classes.container}>
+            <iframe height="650px" title="Embedded Wufoo Form" allowtransparency="true" frameborder="0" scrolling="no" style={{width:"100%", border:"none", display: "flex", justifyContent: "center"}} src="https://thomasdahlberg.wufoo.com/embed/z3ew9o30bhrty6/"> <a href="https://thomasdahlberg.wufoo.com/forms/z3ew9o30bhrty6/">Fill out my Wufoo form!</a> </iframe>
           </Plate>
         </Content>
       </Layout>
