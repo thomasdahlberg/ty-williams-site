@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../components/Layout";
+import React from "react";
+import Layout from "../components/layout";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import theme from '../gatsby-theme-material-ui-top-layout/theme';
 import Head from "../components/Head";

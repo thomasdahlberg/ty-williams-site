@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline, ThemeProvider, Typography, List, ListItem, ListItemText, ListItemIcon, Divider } from "@material-ui/core";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -8,7 +8,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@mui/material/Grid';
 
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import theme from '../gatsby-theme-material-ui-top-layout/theme';
 import Head from "../components/Head";
 import Plate from "../components/Plate";
