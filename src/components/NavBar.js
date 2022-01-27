@@ -35,7 +35,7 @@ const NavBar = (props) => {
       <Link className={classes.link} activeClassName={classes.activeLink} to="/"><Typography variant="button" className={classes.text}>Home</Typography></Link>
       <Link className={classes.link} activeClassName={classes.activeLink} to="/services"><Typography variant="button" className={classes.text}>Services</Typography></Link>
       <Link className={classes.link} activeClassName={classes.activeLink} to="/contact"><Typography variant="button" className={classes.text}>Contact Me</Typography></Link>
-      <Link className={classes.link} activeClassName={classes.activeLink} to="https://tyanisha-williams.clientsecure.me/"><Typography variant="button" className={classes.text}>Client Portal</Typography></Link>
+      <Link className={classes.link} activeClassName={classes.activeLink} to="https://simplybecoming.clientsecure.me/"><Typography variant="button" className={classes.text}>Client Portal</Typography></Link>
     </Box>
   )
 }
