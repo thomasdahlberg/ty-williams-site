@@ -38,9 +38,9 @@ const Content = (props) => {
   } else {
     return (
       <Box className={classes.container} display="flex" flexDirection="column" justifyContent="center">
-        <Box display="flex" alignItems="center" flexDirection="column">
-          <Box sx={{ flexGrow: 1 }}>{props.children}</Box>
-        </Box>
+        {/* <Box display="flex" alignItems="center" flexDirection="column"> */}
+          <Box>{props.children}</Box>
+        {/* </Box> */}
       </Box>
     )
   }
