@@ -35,7 +35,8 @@ const Contact = () => {
             <Grid item xs={12} sm={12}> */}
               {/* <Plate form variant="h4"> */}
               {/* <div className={classes.container}> */}
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCmWju8TOy75l1N9GZ4h4XUSuGHE0K_eZYlPAI23MUsWekHQ/viewform?embedded=true" title="Contact Form" width="100%" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCmWju8TOy75l1N9GZ4h4XUSuGHE0K_eZYlPAI23MUsWekHQ/viewform?embedded=true" title="Contact Form" width="100%" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcVlR_AJIhoB1-BuIszqavP8mNIG7zaBV9CUGysjDv5i6oLQ/viewform?embedded=true" title="Contact Form" width="100%" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               {/* </div> */}
               {/* </Plate> */}
             {/* </Grid>
