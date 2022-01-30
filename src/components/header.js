@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import { Link } from "gatsby"
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../images/sb_logo.svg';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -27,7 +28,7 @@ const Header = (props) => {
   return (
     <Box className={classes.container}>
       <Link to="/" className={classes.link}>
-        <img className={classes.logo} src="./sb_logo.svg" alt="logo" aria-label="Simply Becoming Counseling LLC logo" />
+        <img className={classes.logo} src={logo} alt="logo" aria-label="Simply Becoming Counseling LLC logo" />
       </Link>
       <NavBar />
     </Box>

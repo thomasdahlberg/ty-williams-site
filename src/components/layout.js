@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Link } from "@material-ui/core";
+import splash from "../images/splash_full.jpg";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     minHeight: "75vh",  
-    backgroundImage: `url("./splash_full.jpg")`,  
+    backgroundImage: `url("${splash}")`,  
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
