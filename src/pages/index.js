@@ -196,7 +196,7 @@ them develop practical tools to navigate through seasons of transition. I have o
                 <AccordionDetails className={classes.details}>
                   <Box display="flex" flexDirection="column">
                     <Typography component="p">
-                      It is my belief that therapy is about equipping individuals to develop practical tools to navigate through life's challenges while taking the necessary steps to become the best versions of themselves. I believe that you can: 
+                      I believe that you can: 
                     </Typography>
                     <List>
                       <ListItem>
