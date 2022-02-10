@@ -87,7 +87,8 @@ const Home = () => {
                       teaching, I moved to Baltimore where I obtained a Master’s degree in Clinical
                       Mental Health Counseling from Loyola University Maryland.
                     </Typography>
-                    <Typography component="p" className={classes.bio}>I am particularly passionate about working with adults. I have over 11 years of
+                    <Typography component="p" className={classes.bio}>I am particularly passionate about working with adult men and women to help
+them develop practical tools to navigate through seasons of transition. I have over 11 years of
                       experience working in diverse therapeutic settings such as outpatient, hospitals
                       and schools. I have specialized training and experience in anxiety, depression,
                       trauma, life transitions, self-esteem, spirituality, and relationship issues. My
@@ -121,19 +122,19 @@ const Home = () => {
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Struggling with anxiety and/or depressive symptoms that are difficult to control.</ListItemText>
+                        <ListItemText>Struggling with signs and symptoms of anxiety, depression and trauma.</ListItemText>
                       </ListItem>
                       <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Overextending themselves and having a challenging time prioritizing self-care.</ListItemText>
+                        <ListItemText>Overextending themselves and having a difficult time prioritizing self-care.</ListItemText>
                       </ListItem>
                       <ListItem>
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Constantly feeling burned out and depleted by the demands and expectations.</ListItemText>
+                        <ListItemText>Constantly feeling burned out and depleted by demands and expectations.</ListItemText>
                       </ListItem>
                       <ListItem>
                         <ListItemIcon>
@@ -166,13 +167,20 @@ const Home = () => {
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
+                      <ListItemText>As a wife, a mom, and a career woman, I know the challenge in trying to find balance.</ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <ChevronRightIcon />
+                      </ListItemIcon>
                       <ListItemText>It’s rewarding for me to be able to guide individuals towards awareness, growth, healing, and wellness.</ListItemText>
                     </ListItem>
                     <ListItem>
                       <ListItemIcon>
                         <ChevronRightIcon />
                       </ListItemIcon>
-                      <ListItemText>As a wife, a mom, and a career woman, I know the challenge in trying to find balance.</ListItemText>
+                      <ListItemText>I am passionate about equipping individuals with the tools needed to become 
+                        the best version of themselves.</ListItemText>
                     </ListItem>
                   </List>
                 </AccordionDetails>
@@ -201,13 +209,7 @@ const Home = () => {
                         <ListItemIcon>
                           <ChevronRightIcon />
                         </ListItemIcon>
-                        <ListItemText>Develop emotional resilience to adapt to life’s transitions.</ListItemText>
-                      </ListItem>
-                      <ListItem>
-                        <ListItemIcon>
-                          <ChevronRightIcon />
-                        </ListItemIcon>
-                        <ListItemText>Learn to set clear boundaries and effectively maintain and refine them.</ListItemText>
+                        <ListItemText>Learn to set clear boundaries and effectively maintain them.</ListItemText>
                       </ListItem>
                       <ListItem>
                         <ListItemIcon>

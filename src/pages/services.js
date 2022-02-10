@@ -82,12 +82,6 @@ const Services = () => {
                     <ListItemIcon>
                       <ChevronRightIcon />
                     </ListItemIcon>
-                    <ListItemText>Intake (60 minutes):  $140.00</ListItemText>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <ChevronRightIcon />
-                    </ListItemIcon>
                     <ListItemText>Individual Counseling (50 minutes): $140.00</ListItemText>
                   </ListItem>
                 </List>
